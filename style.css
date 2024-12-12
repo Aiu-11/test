@@ -1,27 +1,27 @@
-        body {
+    .body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
 }
-header {
+.header {
     background: #333;
     color: #2a8caa;
     padding: 1rem 0;
     text-align: center;
 }
-nav {
+.nav {
     display: flex;
     justify-content: center;
     background: #444;
     padding: 0.5rem 0;
 }
-nav a {
+.nav a {
     color: #fff;
     margin: 0 1rem;
     text-decoration: none;
 }
-nav a:hover {
+.nav a:hover {
     text-decoration: underline;
 }
 .container {
@@ -30,10 +30,10 @@ nav a:hover {
     margin: 0 auto;
     padding: 2rem 0;
 }
-section {
+.section {
     margin-bottom: 2rem;
 }
-footer {
+.footer {
     text-align: center;
     background: #333;
     color: #fff;
