@@ -3,10 +3,172 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Portfolio</title>
+    <title>洗練されたポートフォリオ</title>
+    <style>
+        /* 全体のスタイル */
+        body {
+            font-family: 'Palatino Linotype', 'Book Antiqua', serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+            background-color: #faf8f5;
+            color: #2b2b2b;
+        }
+
+        /* ヘッダーのスタイル */
+        header {
+            background-color: #2e4230;
+            color: #f9f5eb;
+            padding: 30px 0;
+            text-align: center;
+            border-bottom: 3px solid #d3b88c;
+        }
+        header h1 {
+            font-size: 3rem;
+            font-weight: normal;
+            margin: 0;
+            color: #f9f5eb;
+        }
+        nav {
+            margin-top: 15px;
+        }
+        nav a {
+            margin: 0 20px;
+            color: #d3b88c;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+        nav a:hover {
+            color: #f9f5eb;
+        }
+
+        /* 各セクションのスタイル */
+        section {
+            padding: 80px 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #2e4230;
+            border-bottom: 2px solid #d3b88c;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+        section p {
+            font-size: 1.2rem;
+            color: #555;
+        }
+
+        /* プロジェクトカードのスタイル */
+        .projects {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .project-card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            width: calc(33% - 20px);
+            min-width: 280px;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+        }
+        .project-card img {
+            max-width: 100%;
+            border-bottom: 1px solid #ddd;
+        }
+        .project-card h3 {
+            font-size: 1.5rem;
+            margin: 15px;
+            color: #2e4230;
+        }
+        .project-card p {
+            margin: 0 15px 15px;
+            font-size: 1rem;
+            color: #555;
+        }
+
+        /* ボタンのスタイル */
+        a.button {
+            display: inline-block;
+            margin: 15px 15px 25px;
+            padding: 10px 20px;
+            background-color: #d3b88c;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+        a.button:hover {
+            background-color: #2e4230;
+        }
+
+        /* フッターのスタイル */
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #2e4230;
+            color: #f9f5eb;
+            font-size: 0.9rem;
+        }
+    </style>
 </head>
 <body>
-    <h1>ポートフォリオサイトへようこそ</h1>
+    <header>
+        <h1>Elegant Portfolio</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>閲覧いただきありがとうございます。</br>
+            帝京平成大学人文社会学部人間文化学科メディア文化コース所属の及川 実紅です。</br>
+            私は大学内で、造形デザイン、情報デザインを主に学習しています。音響について興味があるため学習を深めたいと考えており試行錯誤しています。<br>
+           自然やアートからインスピレーションを得て、美しい作品を作り出します。</p>
+    </section>
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects">
+            <div class="project-card">
+                <img src="https://via.placeholder.com/300x200" alt="Project 1">
+                <h3>プロジェクト1</h3>
+                <p>ラグジュアリーブランド向けウェブデザイン。</p>
+                <a href="#" class="button">詳細を見る</a>
+            </div>
+            <div class="project-card">
+                <img src="https://via.placeholder.com/300x200" alt="Project 2">
+                <h3>プロジェクト2</h3>
+                <p>クラシカルなUIを取り入れたウェブアプリ。</p>
+                <a href="#" class="button">詳細を見る</a>
+            </div>
+            <div class="project-card">
+                <img src="https://via.placeholder.com/300x200" alt="Project 3">
+                <h3>プロジェクト3</h3>
+                <p>モダンアートをテーマにしたポートフォリオ。</p>
+                <a href="#" class="button">詳細を見る</a>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>ご興味を持っていただけましたら、以下のメールアドレスまでご連絡ください。</p>
+        <p><a href="mailto:your-email@example.com" style="color: #2e4230;">your-email@example.com</a></p>
+    </section>
+    <footer>
+        &copy; 2024 Elegant Portfolio. All rights reserved.
+    </footer>
 </body>
 </html>
