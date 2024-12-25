@@ -64,7 +64,7 @@ section p {
     border: 1px solid #ddd;
     border-radius: 10px;
     overflow: hidden;
-    width: 300px; /* カードの固定幅を設定 */
+    width: 300px; 
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -111,12 +111,5 @@ footer {
     background-color: #2e4230;
     color: #f9f5eb;
     font-size: 0.9rem;
-}
-/* プロジェクトカードのスタイル */
-.projects {
-    display: flex;
-    gap: 20px; /* カード間の隙間を少し狭くしました */
-    justify-content: space-between; /* 均等に配置します */
-    overflow-x: auto; /* 横スクロール可能にします（必要なら追加） */
 }
 
