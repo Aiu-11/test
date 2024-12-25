@@ -96,12 +96,12 @@ section p {
     overflow-x: auto;
 }
 
-.skill-card {
+.Skill-card {
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 10px;
     overflow: hidden;
-    width: 300px; 
+    width: 200px; 
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -109,6 +109,12 @@ section p {
 .skillset:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+}
+
+.skill-card h3 {
+    font-size: 1rem;
+    margin: 15px;
+    color: #2e4230;
 }
 
 /* ボタンのスタイル */
