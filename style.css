@@ -106,12 +106,12 @@ section p {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.skillset:hover {
-    transform: translateY(-5px);
+.Skillset:hover {
+    transform: translateY(5px);
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
 }
 
-.skill-card h3 {
+.Skill-card h3 {
     font-size: 1rem;
     margin: 15px;
     color: #2e4230;
