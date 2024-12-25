@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>写真紹介</title>
+</head>
+<style>
+    /* 写真カードの画像サイズ調整 */
+.photo-card img {
+    max-width: 100%; /* 親要素の幅に合わせて画像が自動的に縮小される */
+    height: auto;    /* 高さは自動調整される */
+    border-bottom: 1px solid #ddd; /* 枠線を追加して、カードの外観を整える */
+}
+</style>
+<body>
+    <header>
+        <h1>Portfolio - 写真紹介</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="#photos">Photos</a>
+        </nav>
+    </header>
+    <section id="photos">
+        <h2>Photos</h2>
+        <div class="photo-gallery">
+            <div class="photo-card">
+                <img src="322D15010_及川実紅_1.JPG" alt="写真2">
+                <h3>説明</h3>
+                <p>デジタルカメラ演習にて、自分の宝物の撮影を行った際に撮った1枚です。</br>
+                    ⚫︎工夫点⚫︎</br>
+                    3DSが白色なので背景の色を黒にしました。</br>輪郭がなるべくボケないようにピントの合わせ方にも工夫を凝らしました。</br>
+                    画面に余計なものが反射しないように周りの環境にも注意をおき、</br>ライトを当て綺麗に撮れるようにしました。</br>
+                    ⚫︎制作期間⚫︎</br>
+                    1日
+                </p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        &copy; 2024 Portfolio.
+    </footer>
+</body>
+</html>

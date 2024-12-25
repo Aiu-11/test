@@ -6,29 +6,34 @@ body {
     background-color: #faf8f5;
     color: #2b2b2b;
 }
+
 /* ヘッダーのスタイル */
 header {
     background-color: #2e4230;
     color: #f9f5eb;
-    padding: 30px 0;
+    padding: 30px 20px;
     text-align: center;
     border-bottom: 3px solid #d3b88c;
 }
+
 header h1 {
     font-size: 3rem;
     font-weight: normal;
     margin: 0;
     color: #f9f5eb;
 }
+
 nav {
     margin-top: 15px;
 }
+
 nav a {
     margin: 0 20px;
     color: #d3b88c;
     text-decoration: none;
     font-size: 1.1rem;
 }
+
 nav a:hover {
     color: #f9f5eb;
 }
@@ -39,6 +44,7 @@ section {
     max-width: 900px;
     margin: 0 auto;
 }
+
 section h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
@@ -47,6 +53,7 @@ section h2 {
     display: inline-block;
     padding-bottom: 5px;
 }
+
 section p {
     font-size: 1.2rem;
     color: #555;
@@ -55,16 +62,17 @@ section p {
 /* プロジェクトカードのスタイル */
 .projects {
     display: flex;
-    gap: 20px; 
-    justify-content: space-between; 
-    overflow-x: auto;
+    gap: 20px;
+    justify-content: space-between;
+    flex-wrap: wrap; /* 横並びが崩れないように */
 }
+
 .project-card {
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 10px;
     overflow: hidden;
-    width: 300px; 
+    width: 300px;
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -73,28 +81,30 @@ section p {
     transform: translateY(-5px);
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
 }
+
 .project-card img {
     max-width: 100%;
     border-bottom: 1px solid #ddd;
 }
+
 .project-card h3 {
     font-size: 1.5rem;
     margin: 15px;
     color: #2e4230;
 }
+
 .project-card p {
     margin: 0 15px 15px;
     font-size: 1rem;
     color: #555;
 }
 
-/*スキルセットのやつ*/
+/* スキルセットのスタイル */
 .skillset {
     display: flex;
-    flex-direction: row; /* 横並びに配置 */
-    gap: 20px; /* 各カード間のスペース */
-    justify-content: space-between; /* カードを等間隔に配置 */
-    overflow-x: auto; /* 横スクロールを許可 */
+    flex-wrap: wrap; /* 横並びが崩れないように */
+    gap: 20px;
+    justify-content: space-between;
 }
 
 .Skill-card {
@@ -102,7 +112,7 @@ section p {
     border: 1px solid #ddd;
     border-radius: 10px;
     overflow: hidden;
-    width: 200px; /* カードの固定幅 */
+    width: 200px;
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -118,7 +128,6 @@ section p {
     color: #2e4230;
 }
 
-
 /* ボタンのスタイル */
 a.button {
     display: inline-block;
@@ -131,6 +140,7 @@ a.button {
     font-size: 1rem;
     transition: background-color 0.3s ease;
 }
+
 a.button:hover {
     background-color: #2e4230;
 }
@@ -144,3 +154,116 @@ footer {
     font-size: 0.9rem;
 }
 
+/* モーダルのスタイル */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);  /* 背景を少し暗く */
+    z-index: 9999;
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    max-width: 500px;
+}
+
+.close {
+    font-size: 30px;
+    color: #aaa;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* レスポンシブ対応 */
+
+/* 画面幅が768px以下のとき */
+@media (max-width: 768px) {
+    header {
+        padding: 20px 0;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    nav {
+        margin-top: 10px;
+    }
+
+    nav a {
+        font-size: 1rem;
+        margin: 0 10px;
+    }
+
+    section {
+        padding: 60px 20px;
+    }
+
+    .projects {
+        flex-direction: column;  /* 縦並びに */
+        align-items: center;
+    }
+
+    .project-card {
+        width: 80%;  /* 幅を広げて縦並びでも見やすく */
+    }
+
+    .skillset {
+        flex-direction: column;  /* 縦並びに */
+    }
+
+    .Skill-card {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .modal-content {
+        width: 90%;
+        max-width: 400px;
+    }
+}
+
+/* 画面幅が480px以下のとき */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav a {
+        font-size: 0.9rem;
+        margin: 0 8px;
+    }
+
+    .project-card {
+        width: 100%;
+    }
+
+    .Skill-card {
+        width: 100%;
+    }
+
+    .modal-content {
+        width: 95%;
+    }
+}

@@ -30,19 +30,19 @@
                 <img src="untitled2.jpg" alt="Project 1">
                 <h3>スノードームの作成</h3>
                 <p>Blenderを使用したスノードームの作成</p>
-                <a href="#" class="button">詳細を見る</a>
+                <a href="deatails.html" class="button">詳細を見る</a>
             </div>
             <div class="project-card">
                 <img src="322D15010_及川実紅_1.JPG" alt="Project 2">
                 <h3>3DSの撮影</h3>
                 <p>デジタルカメラ演習での自分の宝物の撮影</p>
-                <a href="#" class="button">詳細を見る</a>
+                <a href="deatails2.html" class="button">詳細を見る</a>
             </div>
             <div class="project-card">
-                <img src="" alt="Project 3">
-                <h3>TV番組のセット制作</h3>
-                <p>大学の授業で架空のTV番組セットの作成</p>
-                <a href="#" class="button">詳細を見る</a>
+                <img src="https://via.placeholder.com/300x200" alt="Project 3">
+                <h3>作品を追加</h3>
+                <p>ここに概要が</br>書かれます</p>
+                <a href="#" class="button">+</a>
             </div>
         </div>
     </section>
@@ -51,26 +51,46 @@
         <div class="skillset">
             <div class="Skill-card">
                 <h3>スキルの追加</h3>
-                <a href="#" class="button">+</a>
+                <a href="#" class="button" onclick="showModal('blenderModal')">+</a>
             </div>
             <div class="Skill-card">
                 <h3>Blender</h3>
-                <a href="#" class="button">☆</a>
+                <a href="#" class="button" onclick="showModal('blenderModal')">☆</a>
             </div>
             <div class="Skill-card">
                 <h3>デジタルカメラ</h3>
-                <a href="#" class="button">☆</a>
+                <a href="#" class="button" onclick="showModal('cameraModal')">☆</a>
             </div>
+            
             <div class="Skill-card">
                 <h3>figma</h3>
-                <a href="#" class="button">☆</a>
+                <a href="#" class="button" onclick="showModal('blenderModal')">☆</a>
             </div>
             <div class="Skill-card">
                 <h3>Photoshop</h3>
-                <a href="#" class="button">☆</a>
+                <a href="#" class="button" onclick="showModal('blenderModal')">☆</a>
             </div>
         </div>
-    </section>    
+    </section>  
+    
+    <div class="modal" id="blenderModal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('blenderModal')">&times;</span>
+            <h2>Blender</h2>
+            <p>Blenderは、3Dモデリングやアニメーションを作成するための無料オープンソースのソフトウェアです。</p>
+        </div>
+    </div>
+    
+    <div class="modal" id="cameraModal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('cameraModal')">&times;</span>
+            <h2>デジタルカメラ</h2>
+            <p>デジタルカメラの使い方に関する詳細。</p>
+        </div>
+    </div>
+    
+
+
     <section id="contact">
         <h2>Contact</h2>
         <p>ご興味を持っていただけましたら、以下のメールアドレスまでご連絡ください。</p>
@@ -79,5 +99,33 @@
     <footer>
         &copy; 2024 Portfolio.
     </footer>
+    <script>
+        // モーダルを表示
+function showModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.style.display = 'block';
+    }
+}
+
+// モーダルを閉じる
+function closeModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.style.display = 'none';
+    }
+}
+
+// モーダル外をクリックして閉じる
+window.onclick = function(event) {
+    const modals = document.querySelectorAll('.modal');
+    modals.forEach(function(modal) {
+        if (event.target == modal) {
+            closeModal(modal.id); // モーダルのIDを使って閉じる
+        }
+    });
+};
+
+    </script>
 </body>
 </html>
